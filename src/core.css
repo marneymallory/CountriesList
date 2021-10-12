@@ -1,0 +1,27 @@
+.CountriesList {
+  text-align: center;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(255, 174, 0);
+  height: 100vh;
+  color: rgb(1, 0, 5);
+}
+
+.Header {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,17 +1,52 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { render } from 'react-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  gql,
+  HttpLink
+} from "@apollo/client";
+import CountriesList from './components/CountriesList'
+import SearchBar from './components/SearchBar'
+import './core.css'
 
-ReactDOM.render(
-  <React.StrictMode>
+
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri: 'https://countries.trevorblades.com',
+  })
+});
+
+export const COUNTRIES = gql`
+query {
+  countries {
+    code
+    name
+    emoji
+  }
+
+}
+`;
+
+function App () {
+  return (
+    <div className="Header">
+      <h1>🇵🇱 🇮🇸 🇯🇵 🇲🇱 Countries List 🇧🇸 🇨🇦 🇧🇷 🇨🇳</h1>
+    </div>
+  );
+}
+
+render(
+
+  <ApolloProvider client={client}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <CountriesList />
+    <SearchBar />
+  </ApolloProvider>,
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+  document.getElementById('root'),
+);
