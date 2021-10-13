@@ -8,14 +8,14 @@ const SearchBarExamples: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>IonSearchBar Examples</IonTitle>
+          {/* <p>Default Searchbar</p> */}
+        <IonSearchbar value={searchText} onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <p>Default Searchbar</p>
-        <IonSearchbar value={searchText} onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
+        
 
-        <p>Searchbar with cancel button always shown</p>
+        {/* <p>Searchbar with cancel button always shown</p>
         <IonSearchbar value={searchText} onIonChange={e => setSearchText(e.detail.value!)} showCancelButton="always"></IonSearchbar>
 
         <p>Searchbar with cancel button never shown</p>
@@ -51,14 +51,9 @@ const SearchBarExamples: React.FC = () => {
         <p>Searchbar in a Toolbar</p>
         <IonToolbar>
           <IonSearchbar value={searchText} onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
-        </IonToolbar>
+        </IonToolbar> */}
 
       </IonContent>
-      <IonFooter>
-        <IonToolbar>
-          Search Text: {searchText ?? '(none)'}
-        </IonToolbar>
-      </IonFooter>
     </IonPage>
   );
 };

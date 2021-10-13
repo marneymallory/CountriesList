@@ -34,7 +34,10 @@ query {
 function App () {
   return (
     <div className="Header">
+      <>
       <h1>🇵🇱 🇮🇸 🇯🇵 🇲🇱 Countries List 🇧🇸 🇨🇦 🇧🇷 🇨🇳</h1>
+      <SearchBar />
+      </>
     </div>
   );
 }
@@ -44,7 +47,6 @@ render(
   <ApolloProvider client={client}>
     <App />
     <CountriesList />
-    <SearchBar />
   </ApolloProvider>,
 
 
