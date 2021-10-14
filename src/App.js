@@ -26,14 +26,15 @@ import CountriesList from './components/CountriesList'
 
 function App () {
   const [searchInput, setSearchInput] = useState('');
-  const fuck = (e) => {
-    console.log(e)
-  }
+  
   return (
-    <>
-    <SearchBar searchInputChanged={(e) => fuck(e)} search={searchInput} />
-    <CountriesList search={searchInput} />
-    </>
+    <div className="Header">
+      <>
+        <h1>🇵🇱 🇮🇸 🇯🇵 🇲🇱 Countries List 🇧🇸 🇨🇦 🇧🇷 🇨🇳</h1>
+        <SearchBar searchInputChanged={(e) => setSearchInput(e)} search={searchInput} />
+        <CountriesList search={searchInput} />
+      </>
+    </div>
   );
 }
 
