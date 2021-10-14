@@ -1,16 +1,21 @@
-import React from 'react';
-import { IonHeader, IonPage, IonToolbar, IonSearchbar,  } from '@ionic/react';
+import React, { useState } from 'react';
+import { IonHeader, IonPage, IonToolbar, IonSearchbar, } from '@ionic/react';
+import CountriesList from './CountriesList';
 
-const SearchBar = (props) => {
+const SearchBar = () => {
+  const [searchInput, setSearchInput] = useState('');
 
   return (
-    <IonPage>
-      <IonHeader>
+    <>
+      <IonPage>
+        <IonHeader>
           <IonToolbar>
-              <IonSearchbar value={props.searchInput} onIonChange={e => props.searchInputChanged}></IonSearchbar> 
+            <IonSearchbar value={searchInput} onIonChange={e => setSearchInput(e.detail.value)}></IonSearchbar>
           </IonToolbar>
-      </IonHeader>
-    </IonPage>
+        </IonHeader>
+      </IonPage>
+      <CountriesList searchInput={searchInput} />
+    </>
   );
 };
 export default SearchBar;

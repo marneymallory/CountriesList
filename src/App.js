@@ -5,7 +5,7 @@
 // function App () {
 //   // const [searchText, setSearchText] = useState('');
 //   return (
-    
+
 //     <div className="Header">
 //       <>
 //         <h1>🇵🇱 🇮🇸 🇯🇵 🇲🇱 Countries List 🇧🇸 🇨🇦 🇧🇷 🇨🇳</h1>
@@ -15,24 +15,22 @@
 //     </div>
 //   );
 // }
-  
+
 
 // export default App;
 
-import React,{ useState } from "react";
 import SearchBar from './components/SearchBar'
 import CountriesList from './components/CountriesList'
 
 
 function App () {
-  const [searchInput, setSearchInput] = useState('');
-  
+
   return (
     <div className="Header">
       <>
         <h1>🇵🇱 🇮🇸 🇯🇵 🇲🇱 Countries List 🇧🇸 🇨🇦 🇧🇷 🇨🇳</h1>
-        <SearchBar searchInputChanged={(e) => setSearchInput(e)} search={searchInput} />
-        <CountriesList search={searchInput} />
+        <SearchBar />
+        <CountriesList />
       </>
     </div>
   );
