@@ -8,7 +8,6 @@ import {
   HttpLink
 } from "@apollo/client";
 import App from './App';
-// import SearchBar from './components/SearchBar'
 import './core.css'
 
 const client = new ApolloClient({
