@@ -3,7 +3,6 @@ import { useQuery } from "@apollo/client";
 import { COUNTRIES } from '../index'
 import '../core.css'
 
-
 const CountriesList = ({ searchInput }) => {
   console.log(`searchInput:`, searchInput)
   const result = useQuery(COUNTRIES);

@@ -1,12 +1,15 @@
 .CountriesList {
   text-align: center;
 }
+.SearchBar {
+  position: absolute;
+  top: 395px;
+  left: 565px;
+}
 
-.searchBar {
-   position: absolute;
-     top: 355px;
-     left: 575px;
-  
+.SearchBar input {
+  height: 30px;
+  width: 70px;
 }
 
 body {

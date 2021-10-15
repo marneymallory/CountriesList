@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonHeader, IonPage, IonToolbar, IonSearchbar, } from '@ionic/react';
+import { IonPage, IonSearchbar, } from '@ionic/react';
 import CountriesList from './CountriesList';
 
 const SearchBar = () => {
@@ -8,15 +8,16 @@ const SearchBar = () => {
   return (
     <>
       <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <div>
+        <br />
+        <br />
+        <br />
+          <div class="SearchInput">
+            <CountriesList searchInput={searchInput} />
+          </div>
+          <div class="SearchBar">
             <IonSearchbar value={searchInput} onIonChange={e => setSearchInput(e.detail.value)}></IonSearchbar>
-            </div>
-          </IonToolbar>
-        </IonHeader>
+          </div>
       </IonPage>
-      <CountriesList searchInput={searchInput} />
     </>
   );
 };
