@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.searchBar {
+   position: absolute;
+     top: 355px;
+     left: 575px;
+  
+}
+
 body {
   font-family: 'Times New Roman', Times, serif;
   background-color: rgb(255, 174, 0);

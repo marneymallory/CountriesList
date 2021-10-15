@@ -9,7 +9,7 @@ const CountriesList = ({ searchInput }) => {
   const result = useQuery(COUNTRIES);
 
   const { loading, error, data } = result;
-  if (loading) return <p>Loading...</p>
+  if (loading) return <p>...</p>
   if (error) return <p>Whoops... Something is Wrong</p>
   const countries = data.countries.filter(countries => countries.name.includes(searchInput));
   return (

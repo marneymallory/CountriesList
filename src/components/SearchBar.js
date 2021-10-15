@@ -10,7 +10,9 @@ const SearchBar = () => {
       <IonPage>
         <IonHeader>
           <IonToolbar>
+            <div>
             <IonSearchbar value={searchInput} onIonChange={e => setSearchInput(e.detail.value)}></IonSearchbar>
+            </div>
           </IonToolbar>
         </IonHeader>
       </IonPage>
