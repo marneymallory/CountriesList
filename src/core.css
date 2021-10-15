@@ -3,7 +3,7 @@
 }
 .SearchBar {
   position: absolute;
-  top: 395px;
+  top: 495px;
   left: 565px;
 }
 
@@ -20,8 +20,8 @@ body {
 }
 
 .photo {
-    height: 300px;
-    width: 500px; 
+    height: 400px;
+    width: 645px; 
 }
 
 .Header {
